@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hungrybirds Menu - The best fast food!</title>
+    <title>Hungrybirds Menu - Enhanced Readability</title>
     <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Load Lucide Icons -->
@@ -12,46 +12,39 @@
       createIcons({ icons: { Twitter, Facebook, Instagram, Phone, Utensils, Pizza, Burger, Soup, Gift, MessageSquare, Menu } });
     </script>
     <style>
-        /* Custom Font - Inter (Tailwind default) is great, but adding a touch of personality */
-        @import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Inter:wght@400;700;900&display=swap');
+        /* Only use Inter for maximum legibility */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap');
         
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #1a1a1a; /* Dark background */
+            background-color: #121212; /* Slightly deeper black background for better contrast */
         }
-        .text-hungrybirds-red { color: #e53e3e; } /* Custom red */
-        .bg-hungrybirds-red { background-color: #e53e3e; }
-        .border-hungrybirds-red { border-color: #e53e3e; }
-        .text-hungrybirds-yellow { color: #f6e05e; } /* Custom yellow/gold */
+        /* Defined brand colors for high contrast */
+        .text-hungrybirds-red { color: #d946ef; } /* Updated to a brighter magenta/red for visual pop */
+        .bg-hungrybirds-red { background-color: #d946ef; }
+        .text-hungrybirds-yellow { color: #facc15; } /* Brighter, clearer yellow/gold */
         
         .menu-item-card {
-            background-color: #2d2d2d;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
-            transition: transform 0.2s, box-shadow 0.2s;
+            background-color: #27272a; /* Darker gray card */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+            transition: transform 0.2s;
         }
         .menu-item-card:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.6);
-        }
-        
-        .section-title {
-            font-family: 'Bungee Shade', cursive;
-            text-shadow: 2px 2px 0 #000;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.8);
         }
     </style>
 </head>
 <body class="min-h-screen text-white">
 
-    <!-- Header Navigation Bar (Sticky for easy access) -->
-    <header class="sticky top-0 z-50 bg-black/90 backdrop-blur-sm border-b-4 border-hungrybirds-red p-4">
+    <!-- Header Navigation Bar (Sticky) -->
+    <header class="sticky top-0 z-50 bg-black/95 backdrop-blur-sm border-b-4 border-hungrybirds-red p-4">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <h1 class="text-3xl font-black text-hungrybirds-yellow tracking-widest section-title">HUNGRYBIRDS</h1>
-            <!-- Simple Desktop Navigation -->
-            <nav class="hidden md:flex space-x-6 font-semibold">
+            <h1 class="text-3xl font-black text-hungrybirds-yellow tracking-widest">HUNGRYBIRDS</h1>
+            <nav class="hidden md:flex space-x-6 font-semibold text-lg">
                 <a href="#pizzas" class="hover:text-hungrybirds-red transition duration-200">Pizzas</a>
                 <a href="#sandwiches" class="hover:text-hungrybirds-red transition duration-200">Sandwiches</a>
-                <a href="#tacos" class="hover:text-hungrybirds-red transition duration-200">Tacos & Fajitas</a>
-                <a href="#burgers" class="hover:text-hungrybirds-red transition duration-200">Burgers</a>
+                <a href="#tacos" class="hover:text-hungrybirds-red transition duration-200">Tacos & Burgers</a>
                 <a href="#offres" class="hover:text-hungrybirds-red transition duration-200">Offres</a>
             </nav>
             <div class="md:hidden">
@@ -65,240 +58,354 @@
         <!-- Hero Section -->
         <section class="text-center py-16 bg-hungrybirds-red rounded-xl shadow-2xl mb-12">
             <div class="p-4">
-                <i data-lucide="utensils" class="w-16 h-16 mx-auto text-black"></i>
-                <h2 class="text-5xl md:text-7xl font-extrabold mt-4 text-black section-title">MENU</h2>
-                <p class="text-xl md:text-2xl mt-2 font-medium text-black/80">Fresh ingredients, incredible taste. Explore our full offering!</p>
+                <i data-lucide="utensils" class="w-16 h-16 mx-auto text-white/90"></i>
+                <h2 class="text-5xl md:text-7xl font-black mt-4 text-white">MENU</h2>
+                <p class="text-xl md:text-2xl mt-2 font-medium text-white/80">Fresh ingredients, incredible taste.</p>
             </div>
         </section>
 
         <!-- Combos & Offers Section -->
         <section id="offres" class="mb-16">
-            <h3 class="text-4xl section-title text-hungrybirds-yellow mb-6 border-b-4 border-hungrybirds-red pb-2 flex items-center">
-                <i data-lucide="gift" class="w-8 h-8 mr-3"></i> Nos Offres (Combos)
+            <h3 class="text-3xl md:text-4xl font-extrabold text-hungrybirds-yellow mb-8 border-b-4 border-hungrybirds-red pb-3 flex items-center">
+                <i data-lucide="gift" class="w-8 h-8 mr-3"></i> Combos & Offres Spéciales
             </h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Offer Card Structure -->
-                <div class="menu-item-card p-6 rounded-xl border-l-4 border-hungrybirds-red">
-                    <p class="text-2xl font-bold">1 Chiken + 1 Boisson</p>
-                    <p class="text-hungrybirds-yellow text-4xl font-extrabold mt-2">200.00</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Offer Card Structure - Emphasize the price and value -->
+                <div class="menu-item-card p-6 rounded-xl border-l-8 border-hungrybirds-red">
+                    <p class="text-xl font-bold mb-2">1 Chiken + 1 Boisson</p>
+                    <p class="text-hungrybirds-yellow text-4xl font-extrabold">200.00</p>
                 </div>
-                <div class="menu-item-card p-6 rounded-xl border-l-4 border-hungrybirds-red">
-                    <p class="text-2xl font-bold">3 Burgers + 1 Boisson 1L</p>
-                    <p class="text-hungrybirds-yellow text-4xl font-extrabold mt-2">600.00</p>
+                <div class="menu-item-card p-6 rounded-xl border-l-8 border-hungrybirds-red">
+                    <p class="text-xl font-bold mb-2">3 Burgers + 1 Boisson 1L</p>
+                    <p class="text-hungrybirds-yellow text-4xl font-extrabold">600.00</p>
                 </div>
-                <div class="menu-item-card p-6 rounded-xl border-l-4 border-hungrybirds-red">
-                    <p class="text-2xl font-bold">1 Melfouf + 1 Boisson</p>
-                    <p class="text-hungrybirds-yellow text-4xl font-extrabold mt-2">300.00</p>
+                <div class="menu-item-card p-6 rounded-xl border-l-8 border-hungrybirds-red">
+                    <p class="text-xl font-bold mb-2">1 Melfouf + 1 Boisson</p>
+                    <p class="text-hungrybirds-yellow text-4xl font-extrabold">300.00</p>
                 </div>
-                <div class="menu-item-card p-6 rounded-xl border-l-4 border-hungrybirds-red">
-                    <p class="text-2xl font-bold">6 Burgers + 1 Boisson 1L</p>
-                    <p class="text-hungrybirds-yellow text-4xl font-extrabold mt-2">1000.00</p>
+                <div class="menu-item-card p-6 rounded-xl border-l-8 border-hungrybirds-red">
+                    <p class="text-xl font-bold mb-2">6 Burgers + 1 Boisson 1L</p>
+                    <p class="text-hungrybirds-yellow text-4xl font-extrabold">1000.00</p>
                 </div>
-                <div class="menu-item-card p-6 rounded-xl border-l-4 border-hungrybirds-red">
-                    <p class="text-2xl font-bold">3 Makloub + 1 Boisson 1L</p>
-                    <p class="text-hungrybirds-yellow text-4xl font-extrabold mt-2">1000.00</p>
+                <div class="menu-item-card p-6 rounded-xl border-l-8 border-hungrybirds-red">
+                    <p class="text-xl font-bold mb-2">3 Makloub + 1 Boisson 1L</p>
+                    <p class="text-hungrybirds-yellow text-4xl font-extrabold">1000.00</p>
                 </div>
-                <div class="menu-item-card p-6 rounded-xl border-l-4 border-hungrybirds-red">
-                    <p class="text-2xl font-bold">3 Tacos + Pizza Gratuite</p>
-                    <p class="text-hungrybirds-yellow text-4xl font-extrabold mt-2">Gratuit!</p>
+                <div class="menu-item-card p-6 rounded-xl border-l-8 border-hungrybirds-red">
+                    <p class="text-xl font-bold mb-2">3 Tacos + Pizza Gratuite</p>
+                    <p class="text-hungrybirds-yellow text-4xl font-extrabold">GRATUIT!</p>
                 </div>
             </div>
         </section>
-
-        <!-- Pizzas Section (Complex pricing table) -->
+        
+        <!-- --- PIZZAS SECTION (ENHANCED READABILITY) --- -->
         <section id="pizzas" class="mb-16">
-            <h3 class="text-4xl section-title text-hungrybirds-yellow mb-6 border-b-4 border-hungrybirds-red pb-2 flex items-center">
+            <h3 class="text-3xl md:text-4xl font-extrabold text-hungrybirds-yellow mb-8 border-b-4 border-hungrybirds-red pb-3 flex items-center">
                 <i data-lucide="pizza" class="w-8 h-8 mr-3"></i> Pizzas
             </h3>
-            <div class="overflow-x-auto bg-gray-800 rounded-xl p-4">
-                <table class="w-full text-left table-auto">
-                    <thead>
-                        <tr class="text-hungrybirds-yellow border-b-2 border-hungrybirds-red text-sm md:text-base">
-                            <th class="py-3 px-2 md:px-4 font-extrabold text-xl">Pizza Name</th>
-                            <th colspan="2" class="text-center py-3 border-x border-gray-600">Tomate</th>
-                            <th colspan="2" class="text-center py-3">Sauce Blanche</th>
-                        </tr>
-                        <tr class="text-sm border-b border-gray-600">
-                            <th class="py-2 px-2 md:px-4"></th>
-                            <th class="text-center">L</th>
-                            <th class="text-center border-r border-gray-700">XL</th>
-                            <th class="text-center">L</th>
-                            <th class="text-center">XL</th>
-                        </tr>
-                    </thead>
-                    <tbody class="text-sm md:text-base">
-                        <!-- Data extracted from IMG_20250926_183617_272.jpg -->
-                        <tr class="border-b border-gray-700"><td>Pizza Marguerite</td><td class="text-center">300</td><td class="text-center border-r border-gray-700">600</td><td class="text-center">350</td><td class="text-center">700</td></tr>
-                        <tr class="border-b border-gray-700"><td>Pizza Havana</td><td class="text-center">350</td><td class="text-center border-r border-gray-700">700</td><td class="text-center">400</td><td class="text-center">800</td></tr>
-                        <tr class="border-b border-gray-700"><td>Pizza British</td><td class="text-center">350</td><td class="text-center border-r border-gray-700">700</td><td class="text-center">400</td><td class="text-center">800</td></tr>
-                        <tr class="border-b border-gray-700"><td>Pizza 4 Frommages</td><td class="text-center">550</td><td class="text-center border-r border-gray-700">800</td><td class="text-center">600</td><td class="text-center">900</td></tr>
-                        <tr class="border-b border-gray-700"><td>Pizza 4 Saisons</td><td class="text-center">550</td><td class="text-center border-r border-gray-700">1000</td><td class="text-center">600</td><td class="text-center">1200</td></tr>
-                        <tr class="border-b border-gray-700"><td>Pizza Vegetarienne</td><td class="text-center">400</td><td class="text-center border-r border-gray-700">800</td><td class="text-center">450</td><td class="text-center">900</td></tr>
-                        <tr class="border-b border-gray-700"><td>Pizza Florinsa</td><td class="text-center">350</td><td class="text-center border-r border-gray-700">750</td><td class="text-center">400</td><td class="text-center">800</td></tr>
-                        <tr class="border-b border-gray-700"><td>Pizza Panachi</td><td class="text-center">550</td><td class="text-center border-r border-gray-700">1100</td><td class="text-center">650</td><td class="text-center">1200</td></tr>
-                        <tr><td>Pizza Spéciale</td><td class="text-center">700</td><td class="text-center border-r border-gray-700">1200</td><td class="text-center">800</td><td class="text-center">1300</td></tr>
-                    </tbody>
-                </table>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Pizza Item Structure (Responsive Card) -->
+                
+                <!-- Pizza Item: Marguerite -->
+                <div class="menu-item-card p-5 rounded-xl">
+                    <p class="text-2xl font-bold mb-3">Pizza Marguerite</p>
+                    <div class="grid grid-cols-2 gap-3 text-sm font-semibold">
+                        <div class="bg-gray-700 p-2 rounded-lg">
+                            <span class="text-hungrybirds-red block">Sauce Tomate</span>
+                            <span class="flex justify-between mt-1"><span>L:</span><span class="text-hungrybirds-yellow">300</span></span>
+                            <span class="flex justify-between"><span>XL:</span><span class="text-hungrybirds-yellow">600</span></span>
+                        </div>
+                        <div class="bg-gray-700 p-2 rounded-lg">
+                            <span class="text-hungrybirds-red block">Sauce Blanche</span>
+                            <span class="flex justify-between mt-1"><span>L:</span><span class="text-hungrybirds-yellow">350</span></span>
+                            <span class="flex justify-between"><span>XL:</span><span class="text-hungrybirds-yellow">700</span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pizza Item: Havana -->
+                <div class="menu-item-card p-5 rounded-xl">
+                    <p class="text-2xl font-bold mb-3">Pizza Havana</p>
+                    <div class="grid grid-cols-2 gap-3 text-sm font-semibold">
+                        <div class="bg-gray-700 p-2 rounded-lg">
+                            <span class="text-hungrybirds-red block">Sauce Tomate</span>
+                            <span class="flex justify-between mt-1"><span>L:</span><span class="text-hungrybirds-yellow">350</span></span>
+                            <span class="flex justify-between"><span>XL:</span><span class="text-hungrybirds-yellow">700</span></span>
+                        </div>
+                        <div class="bg-gray-700 p-2 rounded-lg">
+                            <span class="text-hungrybirds-red block">Sauce Blanche</span>
+                            <span class="flex justify-between mt-1"><span>L:</span><span class="text-hungrybirds-yellow">400</span></span>
+                            <span class="flex justify-between"><span>XL:</span><span class="text-hungrybirds-yellow">800</span></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pizza Item: British -->
+                <div class="menu-item-card p-5 rounded-xl">
+                    <p class="text-2xl font-bold mb-3">Pizza British</p>
+                    <div class="grid grid-cols-2 gap-3 text-sm font-semibold">
+                        <div class="bg-gray-700 p-2 rounded-lg">
+                            <span class="text-hungrybirds-red block">Sauce Tomate</span>
+                            <span class="flex justify-between mt-1"><span>L:</span><span class="text-hungrybirds-yellow">350</span></span>
+                            <span class="flex justify-between"><span>XL:</span><span class="text-hungrybirds-yellow">700</span></span>
+                        </div>
+                        <div class="bg-gray-700 p-2 rounded-lg">
+                            <span class="text-hungrybirds-red block">Sauce Blanche</span>
+                            <span class="flex justify-between mt-1"><span>L:</span><span class="text-hungrybirds-yellow">400</span></span>
+                            <span class="flex justify-between"><span>XL:</span><span class="text-hungrybirds-yellow">800</span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pizza Item: 4 Frommages -->
+                <div class="menu-item-card p-5 rounded-xl">
+                    <p class="text-2xl font-bold mb-3">Pizza 4 Frommages</p>
+                    <div class="grid grid-cols-2 gap-3 text-sm font-semibold">
+                        <div class="bg-gray-700 p-2 rounded-lg">
+                            <span class="text-hungrybirds-red block">Sauce Tomate</span>
+                            <span class="flex justify-between mt-1"><span>L:</span><span class="text-hungrybirds-yellow">550</span></span>
+                            <span class="flex justify-between"><span>XL:</span><span class="text-hungrybirds-yellow">800</span></span>
+                        </div>
+                        <div class="bg-gray-700 p-2 rounded-lg">
+                            <span class="text-hungrybirds-red block">Sauce Blanche</span>
+                            <span class="flex justify-between mt-1"><span>L:</span><span class="text-hungrybirds-yellow">600</span></span>
+                            <span class="flex justify-between"><span>XL:</span><span class="text-hungrybirds-yellow">900</span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pizza Item: 4 Saisons -->
+                <div class="menu-item-card p-5 rounded-xl">
+                    <p class="text-2xl font-bold mb-3">Pizza 4 Saisons</p>
+                    <div class="grid grid-cols-2 gap-3 text-sm font-semibold">
+                        <div class="bg-gray-700 p-2 rounded-lg">
+                            <span class="text-hungrybirds-red block">Sauce Tomate</span>
+                            <span class="flex justify-between mt-1"><span>L:</span><span class="text-hungrybirds-yellow">550</span></span>
+                            <span class="flex justify-between"><span>XL:</span><span class="text-hungrybirds-yellow">1000</span></span>
+                        </div>
+                        <div class="bg-gray-700 p-2 rounded-lg">
+                            <span class="text-hungrybirds-red block">Sauce Blanche</span>
+                            <span class="flex justify-between mt-1"><span>L:</span><span class="text-hungrybirds-yellow">600</span></span>
+                            <span class="flex justify-between"><span>XL:</span><span class="text-hungrybirds-yellow">1200</span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pizza Item: Vegetarienne -->
+                <div class="menu-item-card p-5 rounded-xl">
+                    <p class="text-2xl font-bold mb-3">Pizza Vegetarienne</p>
+                    <div class="grid grid-cols-2 gap-3 text-sm font-semibold">
+                        <div class="bg-gray-700 p-2 rounded-lg">
+                            <span class="text-hungrybirds-red block">Sauce Tomate</span>
+                            <span class="flex justify-between mt-1"><span>L:</span><span class="text-hungrybirds-yellow">400</span></span>
+                            <span class="flex justify-between"><span>XL:</span><span class="text-hungrybirds-yellow">800</span></span>
+                        </div>
+                        <div class="bg-gray-700 p-2 rounded-lg">
+                            <span class="text-hungrybirds-red block">Sauce Blanche</span>
+                            <span class="flex justify-between mt-1"><span>L:</span><span class="text-hungrybirds-yellow">450</span></span>
+                            <span class="flex justify-between"><span>XL:</span><span class="text-hungrybirds-yellow">900</span></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pizza Item: Florinsa -->
+                <div class="menu-item-card p-5 rounded-xl">
+                    <p class="text-2xl font-bold mb-3">Pizza Florinsa</p>
+                    <div class="grid grid-cols-2 gap-3 text-sm font-semibold">
+                        <div class="bg-gray-700 p-2 rounded-lg">
+                            <span class="text-hungrybirds-red block">Sauce Tomate</span>
+                            <span class="flex justify-between mt-1"><span>L:</span><span class="text-hungrybirds-yellow">350</span></span>
+                            <span class="flex justify-between"><span>XL:</span><span class="text-hungrybirds-yellow">750</span></span>
+                        </div>
+                        <div class="bg-gray-700 p-2 rounded-lg">
+                            <span class="text-hungrybirds-red block">Sauce Blanche</span>
+                            <span class="flex justify-between mt-1"><span>L:</span><span class="text-hungrybirds-yellow">400</span></span>
+                            <span class="flex justify-between"><span>XL:</span><span class="text-hungrybirds-yellow">800</span></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pizza Item: Panachi -->
+                <div class="menu-item-card p-5 rounded-xl">
+                    <p class="text-2xl font-bold mb-3">Pizza Panachi</p>
+                    <div class="grid grid-cols-2 gap-3 text-sm font-semibold">
+                        <div class="bg-gray-700 p-2 rounded-lg">
+                            <span class="text-hungrybirds-red block">Sauce Tomate</span>
+                            <span class="flex justify-between mt-1"><span>L:</span><span class="text-hungrybirds-yellow">550</span></span>
+                            <span class="flex justify-between"><span>XL:</span><span class="text-hungrybirds-yellow">1100</span></span>
+                        </div>
+                        <div class="bg-gray-700 p-2 rounded-lg">
+                            <span class="text-hungrybirds-red block">Sauce Blanche</span>
+                            <span class="flex justify-between mt-1"><span>L:</span><span class="text-hungrybirds-yellow">650</span></span>
+                            <span class="flex justify-between"><span>XL:</span><span class="text-hungrybirds-yellow">1200</span></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pizza Item: Spéciale -->
+                <div class="menu-item-card p-5 rounded-xl">
+                    <p class="text-2xl font-bold mb-3">Pizza Spéciale</p>
+                    <div class="grid grid-cols-2 gap-3 text-sm font-semibold">
+                        <div class="bg-gray-700 p-2 rounded-lg">
+                            <span class="text-hungrybirds-red block">Sauce Tomate</span>
+                            <span class="flex justify-between mt-1"><span>L:</span><span class="text-hungrybirds-yellow">700</span></span>
+                            <span class="flex justify-between"><span>XL:</span><span class="text-hungrybirds-yellow">1200</span></span>
+                        </div>
+                        <div class="bg-gray-700 p-2 rounded-lg">
+                            <span class="text-hungrybirds-red block">Sauce Blanche</span>
+                            <span class="flex justify-between mt-1"><span>L:</span><span class="text-hungrybirds-yellow">800</span></span>
+                            <span class="flex justify-between"><span>XL:</span><span class="text-hungrybirds-yellow">1300</span></span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
-        <!-- Matloua, Makloub, Soufflés, Desserts, Gratins Section (Two-column layout on desktop) -->
-        <section class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+        <!-- General Items Section (Grouped for efficiency) -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-16">
             
-            <!-- Left Column -->
-            <div class="space-y-8">
-                <div id="makloub">
-                    <h4 class="text-3xl section-title text-hungrybirds-red mb-4 border-b pb-1">Matloua & Makloub</h4>
+            <!-- Column 1: Burgers, Tacos, Melfouf, Desserts -->
+            <div class="space-y-10">
+
+                <!-- Burgers -->
+                <div id="burgers">
+                    <h4 class="text-3xl font-extrabold text-hungrybirds-red mb-4 border-b pb-1 flex items-center">
+                        <i data-lucide="burger" class="w-6 h-6 mr-2"></i> Burgers
+                    </h4>
+                    <div class="space-y-3">
+                        <div class="flex justify-between border-b border-gray-700 pb-1 text-lg"><span>Burger Viande</span><span class="font-bold text-hungrybirds-yellow">180.00</span></div>
+                        <div class="flex justify-between border-b border-gray-700 pb-1 text-lg"><span>Burger Chiken</span><span class="font-bold text-hungrybirds-yellow">180.00</span></div>
+                        <div class="flex justify-between border-b border-gray-700 pb-1 text-lg"><span>Burger Cheese</span><span class="font-bold text-hungrybirds-yellow">350.00</span></div>
+                        <div class="flex justify-between border-b border-gray-700 pb-1 text-lg"><span>Burger Kentucky</span><span class="font-bold text-hungrybirds-yellow">400.00</span></div>
+                    </div>
+                </div>
+
+                <!-- Speciality: Burger au Four -->
+                <div id="burger-four">
+                    <h4 class="text-2xl font-bold text-hungrybirds-yellow mb-4">Spécialité: Burger au Four</h4>
+                    <div class="space-y-3">
+                        <div class="flex justify-between border-b border-gray-700 pb-1 text-lg"><span>Foie</span><span class="font-bold text-hungrybirds-yellow">450.00</span></div>
+                        <div class="flex justify-between border-b border-gray-700 pb-1 text-lg"><span>Poulet</span><span class="font-bold text-hungrybirds-yellow">350.00</span></div>
+                        <div class="flex justify-between border-b border-gray-700 pb-1 text-lg"><span>Mixte</span><span class="font-bold text-hungrybirds-yellow">500.00</span></div>
+                        <div class="flex justify-between border-b border-gray-700 pb-1 text-lg"><span>4 Frommages</span><span class="font-bold text-hungrybirds-yellow">450.00</span></div>
+                        <div class="flex justify-between border-b border-gray-700 pb-1 text-lg"><span>Mexicain</span><span class="font-bold text-hungrybirds-yellow">450.00</span></div>
+                    </div>
+                </div>
+
+                <!-- Tacos -->
+                <div id="tacos">
+                    <h4 class="text-3xl font-extrabold text-hungrybirds-red mb-4 border-b pb-1 flex items-center">
+                        <i data-lucide="message-square" class="w-6 h-6 mr-2"></i> Tacos
+                    </h4>
+                    <div class="space-y-3">
+                        <div class="flex justify-between border-b border-gray-700 pb-1 text-lg"><span>Tacos Foie</span><span class="font-bold text-hungrybirds-yellow">400.00</span></div>
+                        <div class="flex justify-between border-b border-gray-700 pb-1 text-lg"><span>Tacos Viande</span><span class="font-bold text-hungrybirds-yellow">400.00</span></div>
+                        <div class="flex justify-between border-b border-gray-700 pb-1 text-lg"><span>Tacos Mixte</span><span class="font-bold text-hungrybirds-yellow">450.00</span></div>
+                        <div class="flex justify-between border-b border-gray-700 pb-1 text-lg"><span>Tacos Poulet</span><span class="font-bold text-hungrybirds-yellow">400.00</span></div>
+                        <div class="flex justify-between border-b border-gray-700 pb-1 text-lg"><span>Tacos Suisse</span><span class="font-bold text-hungrybirds-yellow">500.00</span></div>
+                        <div class="flex justify-between border-b border-gray-700 pb-1 text-lg"><span>Tacos Mexicain</span><span class="font-bold text-hungrybirds-yellow">450.00</span></div>
+                    </div>
+                </div>
+
+                <!-- Desserts -->
+                <div id="desserts">
+                    <h4 class="text-3xl font-extrabold text-hungrybirds-red mb-4 border-b pb-1 flex items-center">
+                        <i data-lucide="gift" class="w-6 h-6 mr-2"></i> Desserts
+                    </h4>
+                    <div class="space-y-3">
+                        <div class="flex justify-between border-b border-gray-700 pb-1 text-lg"><span>Tiramisu</span><span class="font-bold text-hungrybirds-yellow">200.00</span></div>
+                        <div class="flex justify-between border-b border-gray-700 pb-1 text-lg"><span>Cheesecake</span><span class="font-bold text-hungrybirds-yellow">300.00</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 2: Sandwiches, Baguettes, Makloub, Matloua, Fajitas, Gratins -->
+            <div class="space-y-10">
+                
+                <!-- Sandwiches & Baguettes -->
+                <div id="sandwiches">
+                    <h4 class="text-3xl font-extrabold text-hungrybirds-red mb-4 border-b pb-1 flex items-center">
+                        <i data-lucide="utensils" class="w-6 h-6 mr-2"></i> Sandwiches & Baguettes
+                    </h4>
+                    <!-- Sandwiches -->
+                    <p class="text-2xl font-bold mt-4 mb-2 text-hungrybirds-yellow">Sandwiches</p>
+                    <div class="space-y-3">
+                        <div class="flex justify-between border-b border-gray-700 pb-1 text-lg"><span>Sandwich Foie</span><span class="font-bold text-hungrybirds-yellow">350.00</span></div>
+                        <div class="flex justify-between border-b border-gray-700 pb-1 text-lg"><span>Sandwich Viande</span><span class="font-bold text-hungrybirds-yellow">180.00</span></div>
+                        <div class="flex justify-between border-b border-gray-700 pb-1 text-lg"><span>Sandwich Chawarma</span><span class="font-bold text-hungrybirds-yellow">300.00</span></div>
+                        <div class="flex justify-between border-b border-gray-700 pb-1 text-lg"><span>Sandwich Poulet</span><span class="font-bold text-hungrybirds-yellow">180.00</span></div>
+                        <div class="flex justify-between border-b border-gray-700 pb-1 text-lg"><span>Sandwich Americain</span><span class="font-bold text-hungrybirds-yellow">450.00</span></div>
+                    </div>
+                    <!-- Baguettes -->
+                    <p class="text-2xl font-bold mt-6 mb-2 text-hungrybirds-yellow">Baguettes</p>
+                    <div class="space-y-3">
+                        <div class="flex justify-between border-b border-gray-700 pb-1 text-lg"><span>Baguettes Foie</span><span class="font-bold text-hungrybirds-yellow">550.00</span></div>
+                        <div class="flex justify-between border-b border-gray-700 pb-1 text-lg"><span>Baguettes Poulet</span><span class="font-bold text-hungrybirds-yellow">450.00</span></div>
+                        <div class="flex justify-between border-b border-gray-700 pb-1 text-lg"><span>Baguettes Thon</span><span class="font-bold text-hungrybirds-yellow">400.00</span></div>
+                        <div class="flex justify-between border-b border-gray-700 pb-1 text-lg"><span>Baguettes Spécial</span><span class="font-bold text-hungrybirds-yellow">600.00</span></div>
+                    </div>
+                </div>
+
+                <!-- Makloub, Matloua, Melfouf, Soufflés -->
+                <div id="makloub-melfouf">
+                    <h4 class="text-3xl font-extrabold text-hungrybirds-red mb-4 border-b pb-1">Spécialités Pains</h4>
                     <!-- Matloua -->
                     <p class="text-2xl font-bold mt-4 mb-2 text-hungrybirds-yellow">Matloua</p>
-                    <div class="space-y-2">
-                        <div class="flex justify-between border-b border-gray-700 pb-1"><span>Matloua Viande</span><span class="font-bold text-lg">200.00</span></div>
-                        <div class="flex justify-between border-b border-gray-700 pb-1"><span>Matloua Poulet</span><span class="font-bold text-lg">300.00</span></div>
-                        <div class="flex justify-between border-b border-gray-700 pb-1"><span>Matloua Foie</span><span class="font-bold text-lg">350.00</span></div>
-                        <div class="flex justify-between border-b border-gray-700 pb-1"><span>Matloua Mixte</span><span class="font-bold text-lg">350.00</span></div>
+                    <div class="space-y-3">
+                        <div class="flex justify-between border-b border-gray-700 pb-1 text-lg"><span>Matloua Viande</span><span class="font-bold text-hungrybirds-yellow">200.00</span></div>
+                        <div class="flex justify-between border-b border-gray-700 pb-1 text-lg"><span>Matloua Poulet</span><span class="font-bold text-hungrybirds-yellow">300.00</span></div>
+                        <div class="flex justify-between border-b border-gray-700 pb-1 text-lg"><span>Matloua Foie</span><span class="font-bold text-hungrybirds-yellow">350.00</span></div>
+                        <div class="flex justify-between border-b border-gray-700 pb-1 text-lg"><span>Matloua Mixte</span><span class="font-bold text-hungrybirds-yellow">350.00</span></div>
                     </div>
                     <!-- Makloub -->
                     <p class="text-2xl font-bold mt-6 mb-2 text-hungrybirds-yellow">Makloub</p>
-                    <div class="space-y-2">
-                        <div class="flex justify-between border-b border-gray-700 pb-1"><span>Makloub Poulet</span><span class="font-bold text-lg">300.00</span></div>
-                        <div class="flex justify-between border-b border-gray-700 pb-1"><span>Makloub Viande</span><span class="font-bold text-lg">300.00</span></div>
-                        <div class="flex justify-between border-b border-gray-700 pb-1"><span>Makloub Foie</span><span class="font-bold text-lg">350.00</span></div>
-                        <div class="flex justify-between border-b border-gray-700 pb-1"><span>Makloub Mixte</span><span class="font-bold text-lg">350.00</span></div>
+                    <div class="space-y-3">
+                        <div class="flex justify-between border-b border-gray-700 pb-1 text-lg"><span>Makloub Poulet</span><span class="font-bold text-hungrybirds-yellow">300.00</span></div>
+                        <div class="flex justify-between border-b border-gray-700 pb-1 text-lg"><span>Makloub Viande</span><span class="font-bold text-hungrybirds-yellow">300.00</span></div>
+                        <div class="flex justify-between border-b border-gray-700 pb-1 text-lg"><span>Makloub Foie</span><span class="font-bold text-hungrybirds-yellow">350.00</span></div>
+                        <div class="flex justify-between border-b border-gray-700 pb-1 text-lg"><span>Makloub Mixte</span><span class="font-bold text-hungrybirds-yellow">350.00</span></div>
+                    </div>
+                    <!-- Melfouf -->
+                    <p class="text-2xl font-bold mt-6 mb-2 text-hungrybirds-yellow">Melfouf</p>
+                    <div class="space-y-3">
+                        <div class="flex justify-between border-b border-gray-700 pb-1 text-lg"><span>Melfouf Foie</span><span class="font-bold text-hungrybirds-yellow">350.00</span></div>
+                        <div class="flex justify-between border-b border-gray-700 pb-1 text-lg"><span>Melfouf Viande</span><span class="font-bold text-hungrybirds-yellow">300.00</span></div>
+                        <div class="flex justify-between border-b border-gray-700 pb-1 text-lg"><span>Melfouf Mixte</span><span class="font-bold text-hungrybirds-yellow">350.00</span></div>
+                        <div class="flex justify-between border-b border-gray-700 pb-1 text-lg"><span>Melfouf Poulet</span><span class="font-bold text-hungrybirds-yellow">300.00</span></div>
+                    </div>
+                    <!-- Soufflés -->
+                    <p class="text-2xl font-bold mt-6 mb-2 text-hungrybirds-yellow">Soufflés</p>
+                    <div class="space-y-3">
+                        <div class="flex justify-between border-b border-gray-700 pb-1 text-lg"><span>Soufflé Poulet</span><span class="font-bold text-hungrybirds-yellow">500.00</span></div>
+                        <div class="flex justify-between border-b border-gray-700 pb-1 text-lg"><span>Soufflé 4 Frommages</span><span class="font-bold text-hungrybirds-yellow">500.00</span></div>
+                        <div class="flex justify-between border-b border-gray-700 pb-1 text-lg"><span>Soufflé Foie</span><span class="font-bold text-hungrybirds-yellow">500.00</span></div>
+                        <div class="flex justify-between border-b border-gray-700 pb-1 text-lg"><span>Soufflé Mixte</span><span class="font-bold text-hungrybirds-yellow">500.00</span></div>
                     </div>
                 </div>
 
-                <div id="souffles">
-                    <h4 class="text-3xl section-title text-hungrybirds-red mb-4 border-b pb-1">Soufflés</h4>
-                    <div class="space-y-2">
-                        <div class="flex justify-between border-b border-gray-700 pb-1"><span>Soufflé Poulet</span><span class="font-bold text-lg">500.00</span></div>
-                        <div class="flex justify-between border-b border-gray-700 pb-1"><span>Soufflé 4 Frommages</span><span class="font-bold text-lg">500.00</span></div>
-                        <div class="flex justify-between border-b border-gray-700 pb-1"><span>Soufflé Foie</span><span class="font-bold text-lg">500.00</span></div>
-                        <div class="flex justify-between border-b border-gray-700 pb-1"><span>Soufflé Mixte</span><span class="font-bold text-lg">500.00</span></div>
-                    </div>
-                </div>
-
-                <div id="desserts">
-                    <h4 class="text-3xl section-title text-hungrybirds-red mb-4 border-b pb-1">Desserts</h4>
-                    <div class="space-y-2">
-                        <div class="flex justify-between border-b border-gray-700 pb-1"><span>Tiramisu</span><span class="font-bold text-lg">200.00</span></div>
-                        <div class="flex justify-between border-b border-gray-700 pb-1"><span>Cheesecake</span><span class="font-bold text-lg">300.00</span></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Right Column - Gratins, Sandwiches, Baguettes, Melfouf -->
-            <div class="space-y-8">
-                <div id="gratins">
-                    <h4 class="text-3xl section-title text-hungrybirds-red mb-4 border-b pb-1">Gratins</h4>
-                    <div class="overflow-x-auto bg-gray-800 rounded-xl p-4">
-                        <table class="w-full text-left">
-                            <thead>
-                                <tr class="text-hungrybirds-yellow border-b-2 border-hungrybirds-red">
-                                    <th class="py-2 px-4 font-extrabold">Item</th>
-                                    <th class="text-center">L</th>
-                                    <th class="text-center">XL</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="border-b border-gray-700"><td>Gratin Poulet</td><td class="text-center">400</td><td class="text-center">550</td></tr>
-                                <tr class="border-b border-gray-700"><td>Gratin Foie</td><td class="text-center">450</td><td class="text-center">600</td></tr>
-                                <tr><td>Gratin Spéciale</td><td class="text-center">500</td><td class="text-center">700</td></tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <div id="sandwiches">
-                    <h4 class="text-3xl section-title text-hungrybirds-red mb-4 border-b pb-1">Sandwiches & Baguettes</h4>
-                    
-                    <p class="text-2xl font-bold mt-4 mb-2 text-hungrybirds-yellow">Sandwiches</p>
-                    <div class="space-y-2">
-                        <div class="flex justify-between border-b border-gray-700 pb-1"><span>Sandwich Foie</span><span class="font-bold text-lg">350.00</span></div>
-                        <div class="flex justify-between border-b border-gray-700 pb-1"><span>Sandwich Viande</span><span class="font-bold text-lg">180.00</span></div>
-                        <div class="flex justify-between border-b border-gray-700 pb-1"><span>Sandwich Chawarma</span><span class="font-bold text-lg">300.00</span></div>
-                        <div class="flex justify-between border-b border-gray-700 pb-1"><span>Sandwich Poulet</span><span class="font-bold text-lg">180.00</span></div>
-                        <div class="flex justify-between border-b border-gray-700 pb-1"><span>Sandwich Americain</span><span class="font-bold text-lg">450.00</span></div>
+                <!-- Fajitas & Gratins -->
+                <div id="gratins-fajitas" class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                    <!-- Fajitas -->
+                    <div>
+                        <h4 class="text-2xl font-bold text-hungrybirds-yellow mb-4">Fajitas</h4>
+                        <div class="space-y-3 text-lg">
+                            <div class="flex justify-between border-b border-gray-700 pb-1"><span>Fajitas Foie</span><span class="font-bold text-hungrybirds-yellow">350.00</span></div>
+                            <div class="flex justify-between border-b border-gray-700 pb-1"><span>Fajitas Viande</span><span class="font-bold text-hungrybirds-yellow">350.00</span></div>
+                            <div class="flex justify-between border-b border-gray-700 pb-1"><span>Fajitas Poulet</span><span class="font-bold text-hungrybirds-yellow">350.00</span></div>
+                            <div class="flex justify-between border-b border-gray-700 pb-1"><span>Fajitas Mixte</span><span class="font-bold text-hungrybirds-yellow">400.00</span></div>
+                            <div class="flex justify-between border-b border-gray-700 pb-1"><span>Fajitas Spéciale</span><span class="font-bold text-hungrybirds-yellow">500.00</span></div>
+                        </div>
                     </div>
 
-                    <p class="text-2xl font-bold mt-6 mb-2 text-hungrybirds-yellow">Baguettes</p>
-                    <div class="space-y-2">
-                        <div class="flex justify-between border-b border-gray-700 pb-1"><span>Baguettes Foie</span><span class="font-bold text-lg">550.00</span></div>
-                        <div class="flex justify-between border-b border-gray-700 pb-1"><span>Baguettes Poulet</span><span class="font-bold text-lg">450.00</span></div>
-                        <div class="flex justify-between border-b border-gray-700 pb-1"><span>Baguettes Thon</span><span class="font-bold text-lg">400.00</span></div>
-                        <div class="flex justify-between border-b border-gray-700 pb-1"><span>Baguettes Spécial</span><span class="font-bold text-lg">600.00</span></div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Tacos, Fajitas, Burgers, Melfouf Section (Two-column layout on desktop) -->
-        <section class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-            
-            <!-- Left Column: Tacos & Fajitas -->
-            <div class="space-y-8">
-                <div id="tacos">
-                    <h3 class="text-4xl section-title text-hungrybirds-yellow mb-6 border-b-4 border-hungrybirds-red pb-2 flex items-center">
-                        <i data-lucide="message-square" class="w-8 h-8 mr-3"></i> Tacos
-                    </h3>
-                    <div class="space-y-2">
-                        <div class="flex justify-between border-b border-gray-700 pb-1"><span>Tacos Foie</span><span class="font-bold text-lg">400.00</span></div>
-                        <div class="flex justify-between border-b border-gray-700 pb-1"><span>Tacos Viande</span><span class="font-bold text-lg">400.00</span></div>
-                        <div class="flex justify-between border-b border-gray-700 pb-1"><span>Tacos Mixte</span><span class="font-bold text-lg">450.00</span></div>
-                        <div class="flex justify-between border-b border-gray-700 pb-1"><span>Tacos Poulet</span><span class="font-bold text-lg">400.00</span></div>
-                        <div class="flex justify-between border-b border-gray-700 pb-1"><span>Tacos Suisse</span><span class="font-bold text-lg">500.00</span></div>
-                        <div class="flex justify-between border-b border-gray-700 pb-1"><span>Tacos Mexicain</span><span class="font-bold text-lg">450.00</span></div>
-                    </div>
-                </div>
-
-                <div id="fajitas">
-                    <h3 class="text-4xl section-title text-hungrybirds-yellow mb-6 border-b-4 border-hungrybirds-red pb-2 flex items-center">
-                        <i data-lucide="soup" class="w-8 h-8 mr-3"></i> Fajitas
-                    </h3>
-                    <div class="space-y-2">
-                        <div class="flex justify-between border-b border-gray-700 pb-1"><span>Fajitas Foie</span><span class="font-bold text-lg">350.00</span></div>
-                        <div class="flex justify-between border-b border-gray-700 pb-1"><span>Fajitas Viande</span><span class="font-bold text-lg">350.00</span></div>
-                        <div class="flex justify-between border-b border-gray-700 pb-1"><span>Fajitas Poulet</span><span class="font-bold text-lg">350.00</span></div>
-                        <div class="flex justify-between border-b border-gray-700 pb-1"><span>Fajitas Mixte</span><span class="font-bold text-lg">400.00</span></div>
-                        <div class="flex justify-between border-b border-gray-700 pb-1"><span>Fajitas Spéciale</span><span class="font-bold text-lg">500.00</span></div>
-                    </div>
-                </div>
-
-                <div id="melfouf">
-                    <h3 class="text-4xl section-title text-hungrybirds-yellow mb-6 border-b-4 border-hungrybirds-red pb-2 flex items-center">
-                        <i data-lucide="message-square" class="w-8 h-8 mr-3"></i> Melfouf
-                    </h3>
-                    <div class="space-y-2">
-                        <div class="flex justify-between border-b border-gray-700 pb-1"><span>Melfouf Foie</span><span class="font-bold text-lg">350.00</span></div>
-                        <div class="flex justify-between border-b border-gray-700 pb-1"><span>Melfouf Viande</span><span class="font-bold text-lg">300.00</span></div>
-                        <div class="flex justify-between border-b border-gray-700 pb-1"><span>Melfouf Mixte</span><span class="font-bold text-lg">350.00</span></div>
-                        <div class="flex justify-between border-b border-gray-700 pb-1"><span>Melfouf Poulet</span><span class="font-bold text-lg">300.00</span></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Right Column: Burgers & Specialite -->
-            <div class="space-y-8">
-                <div id="burgers">
-                    <h3 class="text-4xl section-title text-hungrybirds-yellow mb-6 border-b-4 border-hungrybirds-red pb-2 flex items-center">
-                        <i data-lucide="burger" class="w-8 h-8 mr-3"></i> Burgers
-                    </h3>
-                    <div class="space-y-2">
-                        <div class="flex justify-between border-b border-gray-700 pb-1"><span>Burger Viande</span><span class="font-bold text-lg">180.00</span></div>
-                        <div class="flex justify-between border-b border-gray-700 pb-1"><span>Burger Chiken</span><span class="font-bold text-lg">180.00</span></div>
-                        <div class="flex justify-between border-b border-gray-700 pb-1"><span>Burger Cheese</span><span class="font-bold text-lg">350.00</span></div>
-                        <div class="flex justify-between border-b border-gray-700 pb-1"><span>Burger Kentucky</span><span class="font-bold text-lg">400.00</span></div>
-                    </div>
-                </div>
-
-                <div id="specialite">
-                    <h4 class="text-3xl section-title text-hungrybirds-red mb-4 border-b pb-1 mt-8">Spécialité: Burger au Four</h4>
-                    <div class="space-y-2">
-                        <div class="flex justify-between border-b border-gray-700 pb-1"><span>Foie</span><span class="font-bold text-lg">450.00</span></div>
-                        <div class="flex justify-between border-b border-gray-700 pb-1"><span>Poulet</span><span class="font-bold text-lg">350.00</span></div>
-                        <div class="flex justify-between border-b border-gray-700 pb-1"><span>Mixte</span><span class="font-bold text-lg">500.00</span></div>
-                        <div class="flex justify-between border-b border-gray-700 pb-1"><span>4 Frommages</span><span class="font-bold text-lg">450.00</span></div>
-                        <div class="flex justify-between border-b border-gray-700 pb-1"><span>Mexicain</span><span class="font-bold text-lg">450.00</span></div>
+                    <!-- Gratins -->
+                    <div>
+                        <h4 class="text-2xl font-bold text-hungrybirds-yellow mb-4">Gratins (L/XL)</h4>
+                        <div class="space-y-3 text-lg">
+                            <div class="flex justify-between border-b border-gray-700 pb-1"><span>Gratin Poulet</span><span class="font-bold text-hungrybirds-yellow">400 / 550</span></div>
+                            <div class="flex justify-between border-b border-gray-700 pb-1"><span>Gratin Foie</span><span class="font-bold text-hungrybirds-yellow">450 / 600</span></div>
+                            <div class="flex justify-between border-b border-gray-700 pb-1"><span>Gratin Spéciale</span><span class="font-bold text-hungrybirds-yellow">500 / 700</span></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -307,9 +414,9 @@
     </main>
 
     <!-- Footer with Contact Info & Socials -->
-    <footer class="bg-black text-white p-6 md:p-10 border-t-4 border-hungrybirds-red">
+    <footer class="bg-black text-white p-6 md:p-10 border-t-4 border-hungrybirds-red mt-12">
         <div class="max-w-7xl mx-auto text-center">
-            <h5 class="text-2xl font-black text-hungrybirds-yellow tracking-widest section-title mb-4">HUNGRYBIRDS</h5>
+            <h5 class="text-2xl font-black text-hungrybirds-yellow tracking-widest mb-4">HUNGRYBIRDS</h5>
 
             <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8 text-lg mb-6">
                 <!-- Phone Numbers -->
@@ -334,7 +441,7 @@
             </div>
 
             <p class="mt-8 text-sm text-gray-500">
-                Menu created for Hungrybirds. Designed for all mobile and desktop devices.
+                &copy; 2025 Hungrybirds. All rights reserved.
             </p>
         </div>
     </footer>
